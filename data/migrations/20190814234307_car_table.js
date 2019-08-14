@@ -1,11 +1,11 @@
-exports.up = function (knex, Promise) {
+exports.up = function (knex) {
     return knex.schema.createTable('cars', table => {
         table.increments();
         //foreign key linking cars to users.
         table
             .integer('user_id')
             .unsigned()
-            .notNullable()
+            .nullable()
             .references('id')
             .inTable('users')
             .onDelete('CASCADE')
@@ -18,6 +18,6 @@ exports.up = function (knex, Promise) {
     });
 };
 
-exports.down = function (knex, Promise) {
+exports.down = function (knex) {
     return knex.schema.dropTableIfExists('cars');
 };
