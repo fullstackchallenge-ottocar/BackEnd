@@ -3,7 +3,9 @@
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "helmet": "^3.20.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.19.1",
     "sqlite3": "^4.0.9"
@@ -15,5 +17,22 @@
     "nodemon": "^1.19.1",
     "supertest": "^4.0.2",
     "typescript": "^3.5.3"
-  }
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "name": "otto-car-fullstackchallenge-backend",
+  "description": "- Cross-env runs scripts that set and use environment variables across platforms - Jest as testing framework since it provides a great testing experience for JavaScript projects - Knex-cleaner is a helper library to clean a PostgreSQL, MySQL or SQLite3 database tables using Knex. Great for integration tests. - Nodemon is a tool that helps develop node.js based  - SuperTest to call our API routes since it provides an easy-to-use API to send HTTP requests in Nodeapplications by automatically restarting the node application when file changes in the directory are detected. - TypeScript since it greatly improves developer productivity",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fullstackchallenge-ottocar/backend.git"
+  },
+  "author": "Novina Pun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fullstackchallenge-ottocar/backend/issues"
+  },
+  "homepage": "https://github.com/fullstackchallenge-ottocar/backend#readme"
 }
