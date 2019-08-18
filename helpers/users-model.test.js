@@ -64,7 +64,7 @@ describe('users-model', () => {
         created_at: date
       });
 
-      const user3 = await Users.add({
+      const user2 = await Users.add({
         username: 'Mr test2',
         password: hashedPassword,
         email: 'test2@hotmail.com',
