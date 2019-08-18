@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
@@ -19,7 +19,8 @@
     "typescript": "^3.5.3"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "cross-env DB_ENV=testing jest --watchAll --verbose"
   },
   "name": "otto-car-fullstackchallenge-backend",
   "description": "- Cross-env runs scripts that set and use environment variables across platforms - Jest as testing framework since it provides a great testing experience for JavaScript projects - Knex-cleaner is a helper library to clean a PostgreSQL, MySQL or SQLite3 database tables using Knex. Great for integration tests. - Nodemon is a tool that helps develop node.js based  - SuperTest to call our API routes since it provides an easy-to-use API to send HTTP requests in Nodeapplications by automatically restarting the node application when file changes in the directory are detected. - TypeScript since it greatly improves developer productivity",
