@@ -5,10 +5,7 @@ module.exports = {
   findBy,
   findById,
   add,
-  getGETCount,
-  getPOSTCount,
-  getPUTCount,
-  getDELETECount
+  getCount,
 };
 
 function findAll() {
@@ -44,26 +41,11 @@ function update(id, changes) {
     });
 }
 
-function getGETCount() {
+function getCount() {
   return db('http_requests_count')
     .count('GET', { as: 'get_count' })
-    .first();
-}
-
-function getPOSTCount() {
-  return db('http_requests_count')
     .count('POST', { as: 'post_count' })
-    .first();
-}
-
-function getPUTCount() {
-  return db('http_requests_count')
     .count('PUT', { as: 'put_count' })
+    .count('DELETE', { as: 'delete_count' })
     .first();
 }
-
-function getDELETECount() {
-    return db('http_requests_count')
-      .count('DELETE', { as: 'delete_count' })
-      .first();
-  }

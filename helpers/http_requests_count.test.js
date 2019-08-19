@@ -112,23 +112,11 @@ describe('http_requests-model', () => {
         DELETE: 1
       });
 
-      const returnGETCount = await Http_requests.getGETCount();
+      const returnGETCount = await Http_requests.getCount();
       expect(returnGETCount).toEqual({
-        get_count: 1
-      });
-
-      const returnPOSTCount = await Http_requests.getPOSTCount();
-      expect(returnPOSTCount).toEqual({
-        post_count: 2
-      });
-
-      const returnPUTCount = await Http_requests.getPUTCount();
-      expect(returnPUTCount).toEqual({
-        put_count: 1
-      });
-
-      const returnDELETECount = await Http_requests.getDELETECount();
-      expect(returnDELETECount).toEqual({
+        get_count: 1,
+        post_count: 2,
+        put_count: 1,
         delete_count: 1
       });
     });
