@@ -36,16 +36,16 @@
 | ------ | ---------------------- | ------------------------------- | ----------------------------------------------------------------------- |
 | POST   | `/api/auth/register/`      | `username`, `password`,`email` | Registers a New User to our database. Creates a token.                  |
 | POST   | `api//auth/login/`         | `username`, `password`,`email` | Logs a returning user in. Creates a token.                              |
-| GET    | `/api/users`           | Successful Login: uses JWT                | Used to show all user information.                              |
-| POST   | `api/cars`     | Successful Login: uses JWT    |            | Adds a new car into the database
+| GET    | `/api/users/`           | Successful Login: uses JWT                | Used to show all user information.                              |
+| POST   | `api/cars/`     | Successful Login: uses JWT        | Adds a new car into the database
 
-| PUT    | `/api/cars/:id`           | Successful Login: uses JWT     | Used to update the specified cars's information in the database.        |
-| GET    | `/api/cars/carCount`     | Successful Login: uses JWT      | Used to show Total number of cars added     
-| GET    | `/api/cars/activeCount`     | Successful Login: uses JWT      | Used to show Total number of active cars   
-| GET    | `/api/cars/inactiveCount`     | Successful Login: uses JWT      | Used to show Total number of inactive cars   
-| DELETE   | `/api/cars/:id/`      | Successful Login: uses JWT      | Used to delete a car                      
-                        |
-
+| PUT    | `/api/cars/:id`| Successful Login: uses JWT | Used to update the specified cars's information in the database.   
+| GET    | `/api/cars/carCoun/t`     | Successful Login: uses JWT      | Used to show Total number of cars added     
+| GET    | `/api/cars/activeCount/`     | Successful Login: uses JWT      | Used to show Total number of active cars   
+| GET    | `/api/cars/inactiveCount/`     | Successful Login: uses JWT      | Used to show Total number of inactive cars   
+| DELETE   | `/api/cars/:id`      | Successful Login: uses JWT      | Used to delete a car   
+| GET   | `/api/stats/`      | Successful Login: uses JWT      | Used to show active number of HTTP requests sent to the server  
+                        
 # Sample User.
 user: {
     username: 'patrick',
@@ -63,10 +63,21 @@ car: {
 }
 
 # Sample Stats
+# Total number of cars added
 "cars": {        
-        "count": 1    
+        "count": 10    
+        }
+# Total number of active cars 
+"activeCars": {        
+        "count": 8    
+        }
+ 
+# Total number of inactive cars 
+"inactiveCars": {        
+        "count": 2    
         }
         
+# Active number of HTTP requests sent to the server
 "http_requests_count": {
         "get_count": 0,
         "post_count": 2,
