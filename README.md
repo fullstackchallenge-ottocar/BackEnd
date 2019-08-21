@@ -35,7 +35,7 @@
 | Method | Endpoint               | Requires                        | Description                                                             |
 | ------ | ---------------------- | ------------------------------- | ------------------------------------------------------
 | POST   | `/api/auth/register/`      | `username`, `password`,`email` | Registers a New User to our database. Creates a token.                  
-| POST   | `api//auth/login/`         | `username`, `password`,`email` | Logs a returning user in. Creates a token.                              
+| POST   | `/api/auth/login/`         | `username`, `password`,`email` | Logs a returning user in. Creates a token.                              
 | GET    | `/api/users/`           | Successful Login: uses JWT                | Used to show all user information.                              
 | POST   | `api/cars/`     | Successful Login: uses JWT        | Adds a new car into the database
 | PUT    | `/api/cars/:id`| Successful Login: uses JWT | Used to update the specified cars's information in the database.   
