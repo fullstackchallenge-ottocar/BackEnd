@@ -1,4 +1,4 @@
-# Test Driven Development - Backend API 
+# Test Driven Development - Node.js API (SQLite, Express, JSON web tokens)
 # Technologies used for backend (Development)
 - Cross-env runs scripts that set and use environment variables across platforms
 - Jest as testing framework since it provides a great testing experience for JavaScript projects
@@ -46,41 +46,77 @@
 | DELETE   | `/api/cars/:id`      | Successful Login: uses JWT      | Used to delete a car   
 | GET   | `/api/stats/`      | Successful Login: uses JWT      | Used to show active number of HTTP requests sent to the server  
                         
-# Sample User.
-user: {
-    username: 'patrick',
-    password: 'pass',
-    email: 'patrick@gmail.com'
+# Sample User
+```
+"users": {
+    "username": "patrick",
+    "password": "pass",
+    "email": "patrick@gmail.com"
 }
+```
 
 # Sample Car
-car: {
-      user_id: 1,
-      make: 'Tesla',
-      model: 'Model 3',
-      year: 2019,
-      active: 1
+```
+"cars": {
+      "user_id": 1,
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2019,
+      "active": 1
 }
+```
 
 # Sample Stats
 # Total number of cars added
+```
 "cars": {        
         "count": 10    
         }
+ ```
+ 
 # Total number of active cars 
+```
 "activeCars": {        
         "count": 8    
         }
+ ```
  
 # Total number of inactive cars 
+```
 "inactiveCars": {        
         "count": 2    
         }
+```
         
 # Active number of HTTP requests sent to the server
+```
 "http_requests_count": {
         "get_count": 0,
         "post_count": 2,
         "put_count": 2,
         "delete_count": 1
     }
+ ```
+ 
+ ### Local Installation
+* To locally run this web application, you need a good package manager either npm or yarn. 
+I prefer npm as when you install Node.js, npm will install automaically. Here's a great source on how to install node and npm: [https://docs.npmjs.com/downloading-and-installing-node-js-and-npm]
+
+* Once you've succesfully installed node and npm, enter this command and it will install all the dependencies required
+by the project at once:
+
+```sh
+$ npm install
+```
+* Run app
+
+```sh
+$ npm start
+```
+* You will see the below message in terminal if everything was successfully installed:
+** Running on port 4100 **
+
+* Run all automated tests for users, cars and stats helper models
+```sh
+$ npm test
+```
